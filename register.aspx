@@ -4,8 +4,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-             <h1>New Users</h1>
-             <h3>Create an account.</h3>
+             <h1>Create an Account</h1>
              <p>Required fields are marked with *.</p>             
              <input type="text" placeholder="Username" class="form-control">
              <input type="text" placeholder="Email Address" class="form-control">
@@ -22,8 +21,7 @@
         </div>
         <div class="col-md-6">
             <div class="form-group">
-             <h1>Existing Users</h1>
-             <h3>Log in.</h3>                       
+             <h1>Log In</h1>                       
              <input type="text" placeholder="Email Address" class="form-control">
              <input type="text" placeholder="Password" class="form-control">             
              <p><a href="http://www.asp.net" class="btn btn-success">Log In &raquo;</a></p>

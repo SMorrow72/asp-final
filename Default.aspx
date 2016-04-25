@@ -9,33 +9,31 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+        <div class="col-md-12">
+            <h2>Cars</h2>
+           
+            <asp:GridView class="col-md-12" ID="car_grid" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="3" CellPadding="5" DataSourceID="ASPFinal" ForeColor="Black" GridLines="none" CellSpacing="5" BorderStyle="Solid" EmptyDataRowStyle-BorderStyle="Solid" EmptyDataRowStyle-BorderWidth="2px" HorizontalAlign="Center">
+                <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                <Columns>
+                    
+                    <asp:BoundField DataField="photo" HeaderText="Photo" SortExpression="photo" />
+                    <asp:BoundField DataField="listing_name" HeaderText="Title" SortExpression="listing_name" />
+                    <asp:BoundField DataField="car_type" HeaderText="Type" SortExpression="car_type" />
+                    <asp:BoundField DataField="colour" HeaderText="Colour" SortExpression="colour" />
+                    <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" />
+                </Columns>
+                <FooterStyle BackColor="Tan" />
+                <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                <SortedDescendingHeaderStyle BackColor="#C2A47B" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="ASPFinal" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionStringToASPFinal %>" SelectCommand="SELECT [listing_name], [car_type], [colour], [photo], [price] FROM [CARS]"></asp:SqlDataSource>
+            <br />
+           
         </div>
     </div>
 </asp:Content>
